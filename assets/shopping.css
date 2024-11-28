@@ -1,0 +1,89 @@
+@import url(reset.css);
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Rowdies:wght@300;400;700&display=swap");
+
+body {
+  background-color: grey;
+  font-family: "Lobster", sans-serif;
+}
+.productList {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  padding: 15px;
+  background-color: darkorange;
+  border-radius: 20px;
+}
+
+.product-card {
+  background-color: gray;
+  gap: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+}
+
+.product-card img {
+  width: 100%;
+  display: block;
+  background-color: white;
+}
+.product-card h4 {
+  background-color: blueviolet;
+  font-family: "Rowdies", sans-serif;
+  padding: 7px 10px;
+  border-radius: 5px;
+}
+.product-tag {
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+.product-tag li {
+  background-color: lightskyblue;
+  padding: 5px;
+}
+#filterForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding-bottom: 15px;
+  background-color: blueviolet;
+}
+
+#filterForm img {
+  height: 100px;
+  width: 150px;
+  margin: auto;
+}
+
+#filterForm input {
+  width: 99%;
+  padding-block: 20px;
+  border-radius: 50px;
+  border: 3px solid darkorange;
+  box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+  &::placeholder{
+    text-align: center;
+  }
+}
+@media only screen and (width < 370px) {
+  .productList {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  #filterForm img {
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 765px) {
+  .productList {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .productList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
